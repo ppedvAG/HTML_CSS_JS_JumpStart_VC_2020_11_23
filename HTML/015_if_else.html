@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else</title>
+    <style>
+        .output {
+            border: 2px solid green;
+            padding: 20px;
+            width: 200px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="num">
+    <div id="output" class="output"></div>
+
+    <script>
+
+        var x = 7;
+        var inpNum = document.getElementById('num');
+        var outputDiv = document.getElementById('output');
+
+        if (x === 7) {
+            console.log("X hat den Wert 7.");
+        }
+        else if (x === 5) {
+            console.log("X hat den Wert 5.");
+        }
+        else if (x > 7) {
+            console.log("X ist größer als 7.");
+        }
+        else if (isNaN(x)) {
+            console.log("X ist keine Zahl.");
+        }
+        else {
+            console.log("Wert unbekannt (Fehlermeldung).");
+        }
+
+
+
+
+        function checkVal() {
+
+                var inp = inpNum.value;
+
+            if (inp > 10) {
+                outputDiv.innerHTML = "Wert ist größer als 10.";
+            }
+            else if (inp < 10) {
+                outputDiv.innerHTML = "Wert ist kleiner als 10.";
+            }
+            else if (inp == 10) {
+                outputDiv.innerHTML = "Wert ist genau 10.";
+            }
+            else if(isNaN(inp)){
+                outputDiv.innerHTML = "Bitte schreiben Sie eine Zahl in das Input-Feld.";
+            }
+            else{
+                outputDiv.innerHTML = "Allgemeine Fehlermeldung";
+            }
+        }
+
+        // checkVal();
+
+        // zum Auslesen von Input-Feldern: .value (nicht .innerHTML)
+
+        inpNum.addEventListener('change', checkVal);
+
+
+
+    </script>
+</body>
+
+</html>

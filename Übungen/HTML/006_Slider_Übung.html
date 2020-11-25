@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider-Übung</title>
+    <style>
+        .flex-container{
+            display: flex;
+            align-items: center;
+            /* border: 1px solid black; */
+        }
+
+        label{
+            margin-right: 10px;
+            background-color: rgb(41, 109, 177);
+            color: white;
+            padding: .1em 1.5em;
+            font-family: Calibri, Arial, sans-serif;
+        }
+
+        .output{
+            border: 2px solid rgb(41, 109, 177);
+            padding: .5em 1em;
+        }
+
+        .slider-box{
+            position: relative;
+        }
+
+        #now-output{
+            width: 3em;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="flex-container">
+        <div class="box">
+            <label for="slider">Range:</label>
+        </div>
+        <div class="box">
+            <div id="min-output" class="output"></div>
+        </div>
+        <div class="box slider-box">
+            <input type="range" class="slider" id="slider" min="0" max="100" value="50">
+            <div id="now-output" class="output"></div>
+        </div>
+        <div class="box">
+            <div id="max-output" class="output"></div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var minDiv = document.getElementById('min-output');
+        var maxDiv = document.getElementById('max-output');
+        var nowDiv = document.getElementById('now-output');
+        var slider = document.getElementById('slider');
+        // var min = slider.getAttribute('min');
+
+
+        minDiv.innerHTML = slider.getAttribute('min');
+        maxDiv.innerHTML = slider.getAttribute('max');
+        nowDiv.innerHTML = slider.value;
+
+        slider.addEventListener('input', function(){
+            nowDiv.innerHTML = slider.value;
+        });
+        
+        
+
+
+        
+
+    </script>
+</body>
+</html>

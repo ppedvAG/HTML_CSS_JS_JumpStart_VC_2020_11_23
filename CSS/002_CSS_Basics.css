@@ -1,0 +1,39 @@
+
+/* Typ-Selektor */
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    /* font-style: italic; */
+    /* font-weight: bold; */
+    /* font-family: 'Georgia', 'Times New Roman', Times, serif; */
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Klassen-Selektor */
+.demo01{
+    color: chartreuse;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* ID-Selektor */
+#my-great-id{
+    color: cornflowerblue;
+}
+
+
+.demo02{
+    height: 200px;
+    background-color: cyan;
+    /* 
+    border-width: 2px;
+    border-style: solid;
+    border-color: navy;
+ */
+    border: 2px solid navy;
+
+    
+}

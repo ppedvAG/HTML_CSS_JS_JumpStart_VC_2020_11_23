@@ -1,0 +1,36 @@
+body{
+    font-size: 20px;
+}
+
+table{
+    border-collapse: collapse;
+    font-family: Calibri, Arial, sans-serif;
+}
+
+caption{
+    color: dodgerblue;
+    font-size: 2em;
+}
+
+td, th{
+    border: 1px solid white;
+}
+
+th{
+    background-color: dodgerblue;
+    color: white;
+    font-family: 'Bauhaus 93', sans-serif;
+    font-size: 1.1em;
+    border-bottom: 2px solid white;
+}
+
+td{
+    background-color: rgb(231, 235, 240);
+    padding: .5em 1em;
+    min-width: 8em;
+}
+
+tfoot td{            
+    color: dodgerblue;
+    font-size: .8em;
+}

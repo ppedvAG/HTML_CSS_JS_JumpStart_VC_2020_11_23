@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block- und Inlineelemente</title>
+    <style>
+        body {
+            padding-bottom: 200px;
+        }
+
+        .demo-div01 {
+            display: block;
+            background-color: cyan;
+            height: 100px;
+        }
+
+        .demo-div02 {
+            background-color: rgb(9, 170, 170);
+            height: 50px;
+            width: 300px;
+        }
+
+        .demo-div03 {
+            background-color: rgb(42, 122, 122);
+        }
+
+        .demo-p01 {
+            background-color: darkolivegreen;
+        }
+
+        .demo-p02 {
+            background-color: rgb(120, 158, 54);
+        }
+
+        .demo-p03 {
+            background-color: rgb(161, 226, 49);
+        }
+
+        .demo-span01 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+
+        .demo-span02 {
+            /* display: inline; */
+            background-color: darkorchid;
+            /* 
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+             */
+        }
+
+        .img-container {
+            border: 2px solid green;
+            width: 200px;
+            /* height: 100px; */
+        }
+
+        .img-container>img {
+            display: block;
+            width: 100%;
+            /* height: 100%; */
+        }
+
+        .inline-container {
+            background-color: greenyellow;
+        }
+
+        .inline-demo {
+            display: inline-block;
+            background-color: darkgreen;
+            height: 200px;
+            width: 200px;
+            border: 2px solid darkseagreen;
+        }
+
+        .inp-container{
+            margin-bottom: 5px;
+        }
+
+        .lbl-demo-inline{
+            display: inline;
+            width: 100px;
+        }
+
+        
+        .lbl-demo-block{
+            display: block;
+            width: 100px;
+        }
+        
+        .lbl-demo-inline-block{
+            display: inline-block;
+            width: 100px;
+            /* background-color: aqua; */
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="demo-div01"></div>
+    <div class="demo-div02"></div>
+    <div class="demo-div03">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam nesciunt nobis cum neque
+        sapiente vel maiores praesentium modi quo voluptates.</div>
+
+    <p class="demo-p01"><a href="#">Lorem</a> ipsum dolor, sit amet consectetur adipisicing elit. Pariatur culpa magnam
+        excepturi quidem
+        nisi nam <span class="demo-span01">quibusdam dignissimos amet maxime vero.</span>
+    </p>
+    <p class="demo-p02">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptatibus laboriosam est
+        iste dolorem iusto omnis! Atque quaerat alias dolorum, dolorem aliquam delectus ipsam doloremque, reprehenderit
+        praesentium, voluptates labore! Aperiam exercitationem dolor quis labore dignissimos, iste eaque. Facere quaerat
+        facilis neque suscipit, repellat quis ex voluptatem error molestias iste nemo delectus quam minus quidem odio
+        non, qui, culpa autem velit beatae eos. Molestias hic voluptatum itaque repellendus rerum soluta inventore totam
+        numquam quam maiores minus illum ipsa ipsam, corporis tempora suscipit facere sapiente porro incidunt fugit
+        ipsum dolores est! Accusamus sed enim quasi libero, eum quas odio veniam neque mollitia?
+    </p>
+    <p class="demo-p03">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ullam libero fuga culpa vitae, deserunt
+        velit quisquam. Dolorem iure nemo aspernatur magni beatae voluptate, provident sequi? Sit fuga minima eius.
+    </p>
+    <span class="demo-span02">HALLO</span>
+    <span class="demo-span03">HALLO</span>
+    <span class="demo-span04">HALLO</span>
+    <label for="">Vorname:</label>
+    <input type="text">
+    <img src="../images/zebra.jpg" alt="zebra">
+    <img src="../images/cat.jpg" alt="cat">
+
+    <div class="img-container">
+        <img src="../images/cat.jpg" alt="cat">
+    </div>
+    <div class="img-container">
+        <img src="../images/zebra.jpg" alt="zebra">
+    </div>
+
+    <div class="inline-container">
+        <div class="inline-demo"></div>
+        <div class="inline-demo"></div>
+        <div class="inline-demo"></div>
+        <div class="inline-demo"></div>
+        <div class="inline-demo"></div>
+        <div class="inline-demo"></div>
+        <div class="inline-demo"></div>
+        <div class="inline-demo"></div>
+        <div class="inline-demo"></div>
+    </div>
+
+    <h1>Inline-Demo</h1>
+    <form action="#">
+
+        <div class="inp-container">
+            <label for="first-name" class="lbl-demo-inline">Vorname:</label>
+            <input type="text" id="first-name" class="inp-demo" name="first-name">
+        </div>
+        <div class="inp-container">
+            <label for="last-name" class="lbl-demo-inline">Nachname:</label>
+            <input type="text" id="last-name" class="inp-demo" name="last-name">
+        </div>
+        <div class="inp-container">
+            <label for="first-name" class="lbl-demo-inline">Vorname:</label>
+            <input type="text" id="first-name" class="inp-demo" name="first-name">
+        </div>
+
+    </form>
+
+    <h1>Block-Demo</h1>
+    <form action="#">
+
+        <div class="inp-container">
+            <label for="first-name" class="lbl-demo-block">Vorname:</label>
+            <input type="text" id="first-name" class="inp-demo" name="first-name">
+        </div>
+        <div class="inp-container">
+            <label for="last-name" class="lbl-demo-block">Nachname:</label>
+            <input type="text" id="last-name" class="inp-demo" name="last-name">
+        </div>
+        <div class="inp-container">
+            <label for="first-name" class="lbl-demo-block">Vorname:</label>
+            <input type="text" id="first-name" class="inp-demo" name="first-name">
+        </div>
+
+    </form>
+
+    <h1>Inline-Block-Demo</h1>
+    <form action="#">
+
+        <div class="inp-container">
+            <label for="first-name" class="lbl-demo-inline-block">Vorname:</label>
+            <input type="text" id="first-name" class="inp-demo" name="first-name">
+        </div>
+        <div class="inp-container">
+            <label for="last-name" class="lbl-demo-inline-block">Nachname:</label>
+            <input type="text" id="last-name" class="inp-demo" name="last-name">
+        </div>
+        <div class="inp-container">
+            <label for="first-name" class="lbl-demo-inline-block">Vorname:</label>
+            <input type="text" id="first-name" class="inp-demo" name="first-name">
+        </div>
+
+    </form>
+
+</body>
+
+</html>

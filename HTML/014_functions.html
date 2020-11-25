@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funktionen</title>
+   <!--  <script src="../JS/meinTollesJavaScript.js"></script> -->
+    <style>
+        .demo1{
+            border: 2px solid blue;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .demo2{
+            border: 2px solid red;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .demo3{
+            border: 2px solid green;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .demo3:hover{
+            border: 10px groove cadetblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="demo1" class="demo1" onclick="bgCol()"></div>
+    <div id="demo2" class="demo2"></div>
+    <div id="demo3" class="demo3"></div>
+    <button id="btn-ok">OK</button>
+    
+    <script>
+
+        var demoDiv1 = document.getElementById('demo1');
+        var demoDiv2 = document.getElementById('demo2');
+        var demoDiv3 = document.getElementById('demo3');
+        var btnOk = document.getElementById('btn-ok');
+
+
+        function bgCol(){
+            demoDiv1.style.backgroundColor = 'lightblue';
+        }
+
+
+        // Funktionsaufruf (function call)
+
+        // bgCol();
+
+
+        // Funktionsaufruf mit EventListener:
+        // demoDiv2.addEventListener('click', bgCol);
+
+        // anonyme Funktion
+        
+        /* demoDiv2.addEventListener('click', function(){
+            document.getElementById('demo2').style.backgroundColor = 'tomato';
+        }); */
+
+        // kürzer: mit Variable
+        demoDiv2.addEventListener('click', function(){
+            demoDiv2.style.backgroundColor = 'tomato';
+        });
+        // mit this
+        /* document.getElementById('demo2').addEventListener('click', function(){
+            this.style.backgroundColor = 'tomato';
+        }); */
+
+        demoDiv2.addEventListener('mouseover', function(){
+            demoDiv2.style.backgroundColor = 'green';
+        });
+
+        demoDiv2.addEventListener('mouseout', function(){
+            demoDiv2.style.backgroundColor = 'initial';
+        });
+
+        btnOk.addEventListener('click', function(){
+            demoDiv1.style.backgroundColor = 'green';
+        });
+
+
+
+        // Parameter übergeben:
+
+        function demoCalc(a, b){
+            
+            return a * b;
+        }
+
+        console.log(demoCalc(5, 3));
+
+
+    </script>
+</body>
+</html>

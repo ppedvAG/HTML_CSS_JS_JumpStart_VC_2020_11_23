@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+    <link rel="stylesheet" href="../CSS/013_JS_Basics.css">
+    <!-- 
+    <link rel="stylesheet" href="../CSS/013_JS_Basics2.css">
+    <link rel="stylesheet" href="../CSS/013_JS_Basics3.css">
+    <link rel="stylesheet" href="../CSS/013_JS_Basics4.css"> -->
+    <script src="../JS/013_JS_Basics.js" defer></script>
+    <!--  <script src="../JS/013_JS_Basics2.js" defer></script>
+    <script src="../JS/013_JS_Basics3.js" defer></script>
+    <script src="../JS/013_JS_Basics4.js" defer></script> -->
+    <style>
+        .demo{
+            border: 2px solid blue;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .output{
+            border: 2px solid red;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .output2{
+            border: 2px solid green;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="demo" class="demo">Hallo Div!</div>
+
+    <div id="output" class="output"></div>
+
+    <div id="output2" class="output2"></div>
+
+    <script>
+
+        // einzeilige Kommentare
+        /* mehrzeilige 
+            Kommentare*/
+
+        /* 
+        
+            // verschachtelte Kommentare
+        
+        
+        */
+
+        
+        /* 
+            //Konstanten
+
+            const MwSt = 0.19;
+        */
+
+        /* Variablen */
+        /* Variablendeklaration */
+
+        var x;
+        var text;
+        var firstName;
+
+        /* mehrere auf einmal deklarieren: */
+
+        var i, z, fullName;
+
+
+        /* Initialisierung */
+
+        x = 5;
+
+
+        /* Deklaration und Initialisierung kombiniert */
+
+        var y = 3;
+
+        var m = x + y;
+
+
+        console.log(x);
+        // x = 5;
+
+        x = x + 5;
+
+        console.log(x);
+        // der aktuelle Wert von x ist jetzt 10!
+
+        x = x + y;
+
+        console.log(x);
+        // der aktuelle Wert von x ist jetzt 13
+
+
+        console.log("Der aktuelle Wert von x ist " + x + ".");
+
+
+        x = x + 1;
+        x++;
+        x--;
+
+        x = x + 5;
+        x += 5;
+
+
+        /* oft bei Schleifen
+           oft i als "iterator"
+           i = 0;
+
+           i = i + 1;
+           i++;
+           // i--;
+        
+        */
+        var a = 5, b = "5";
+
+        console.log(a == b); // true!
+        console.log(a === b); // false! - fragt auch nach dem Datentyp
+
+        /* Operatoren */
+        /* 
+        
+            +, -, *, /
+            ++, --  //increment, decrement
+            +=, -=, *=, /=
+        
+            %    // Modulus-Operator
+
+
+
+            // Vergleichsoperatoren
+
+            ==, !=, <=, >=
+            ===, !==    // fragt auch Datentyp ab
+
+            //logische Operatoren
+
+            &&   // logisches UND
+            ||   // logisches ODER
+            !    // logisches NICHT
+        
+        */
+
+        /* 
+            // Datentypen
+
+
+            number (Zahl)
+
+            5
+            -5
+            5.3
+            3.3333333333333333
+            123e5 (Exponentialschreibweise) 12300000
+            123e-5  0.00123
+
+
+            string (Text)
+            'Text'
+            "Text"
+            'das ist ein "String"'
+            "das ist ein 'String'"
+
+            boolean
+            true/false
+
+            object (Objekt)
+
+
+            undefined (noch nicht definiert)
+        
+        
+        */
+
+        console.log(typeof text);
+        console.log("Der Datentyp von x ist: " + typeof x + ".");
+        console.log("Ist x nicht number:" + isNaN(x));
+
+
+        firstName = 'James';
+        var lastName = 'Bond';
+
+
+        fullName = firstName + " " + lastName;
+
+        console.log(fullName);
+
+        console.log("Vollständiger Name: " + firstName + " " + lastName);
+
+        console.log(x + y);
+
+        
+
+        var demoDiv = document.getElementById('demo');
+        var outputDiv = document.getElementById('output');
+        var output2 = document.getElementById('output2');
+
+        
+        console.log(document.getElementById('demo').innerHTML);
+
+        console.log(demoDiv.innerHTML);
+
+
+        // outputDiv.innerHTML = "Super, Test hat funktioniert!";
+
+        // wie bekomme ich den Inhalt vom blauen Div?
+        demoDiv.innerHTML;
+
+        // wie schreibe ich Text in das rote Div rein?
+        outputDiv.innerHTML = "Text";
+
+        // wie schreibe ich den Inhalt vom blauen Div auch in das rote Div?
+        outputDiv.innerHTML = demoDiv.innerHTML;
+
+        output2.innerHTML = '<p>' + 'Hallo!' + '</p>';
+
+        text = "Mein Name ist ";
+        text += fullName;
+        text += ".";
+
+        output2.innerHTML += text;
+
+        demoDiv.style.color = 'blue';
+        demoDiv.style.backgroundColor = 'lightblue';
+
+
+    </script>
+</body>
+
+</html>

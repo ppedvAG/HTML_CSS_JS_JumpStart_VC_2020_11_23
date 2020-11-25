@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listen</title>
+    <style>
+/* 
+        ul>li::marker{
+            content: "✂";
+        } 
+ */
+        ul{
+            list-style-type: square;
+        }
+
+        .demo{
+            list-style-type: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Ungeordnete Liste</h1>
+
+    <ul><!-- unordered list -->
+        <li>Apfel</li>
+        <li>Banane</li>
+        <li>Birne</li>
+        <li>Weintrauben</li>
+        <li>Ananas</li>
+    </ul>
+
+    <ul class="demo">
+        <li><a href="">Apfel</a>
+            <ul>
+                <li>Demo1</li>
+                <li>Demo2</li>
+                <li>Demo3</li>
+            </ul>
+        </li>
+        <li><a href="">Banane</a></li>
+        <li><a href="">Birne</a></li>
+        <li><a href="">Weintrauben</a></li>
+        <li><a href="">Ananas</a></li>
+    </ul>
+
+    <h1>Geordnete Listen</h1>
+    <ol><!-- ordered list -->
+        <li>Apfel</li>
+        <li>Banane</li>
+        <li>Birne</li>
+        <li>Weintrauben</li>
+        <li>Ananas</li>
+    </ol>
+    <hr>
+    <ol><!-- ordered list -->
+        <li value="100">Apfel</li>
+        <li>Banane</li>
+        <li>Birne</li>
+        <li>Weintrauben</li>
+        <li>Ananas</li>
+    </ol>
+    <hr>
+    <ol type="I">
+        <li>Apfel</li>
+        <li>Banane</li>
+        <li>Birne</li>
+        <li>Weintrauben</li>
+        <li>Ananas</li>
+    </ol>
+    <hr>
+    <ol reversed>
+        <li>Apfel</li>
+        <li>Banane</li>
+        <li>Birne</li>
+        <li>Weintrauben</li>
+        <li>Ananas</li>
+    </ol>
+    <hr>
+    <!-- Vorsicht: zählt in den negativen Bereich! -->
+    <ol reversed>
+        <li value="1">Apfel</li>
+        <li>Banane</li>
+        <li>Birne</li>
+        <li>Weintrauben</li>
+        <li>Ananas</li>
+    </ol>
+
+    <h1>Description List</h1>
+    <dl><!-- description list -->
+        <dt><!-- definition term -->
+            Kaffee
+        </dt>
+        <dd><!-- definition description -->
+            Koffeinhaltiges Getränk
+        </dd>
+        <dt>
+            Tee
+        </dt>
+        <dd>
+            Aufgussgetränk
+        </dd>
+    </dl>
+</body>
+</html>

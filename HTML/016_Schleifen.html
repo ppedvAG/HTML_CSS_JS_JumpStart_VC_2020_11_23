@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schleifen</title>
+    <style>
+        .demo {
+            border: 2px solid blue;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="demo" class="demo"></div>
+    <button id="btn-ok">OK</button>
+    <button id="btn-for">OK</button>
+
+
+    <script>
+
+        var demoDiv = document.getElementById('demo');
+        var btnOk = document.getElementById('btn-ok');
+        var btnFor = document.getElementById('btn-for');
+        var text = "";
+
+        /* WHILE-Schleife */
+        /* 
+                var i = 1;
+        
+                while(i < 11){
+                    text += 'Die Schleife wurde ' + i + ' Mal ausgeführt.' + '<br>';
+                    i++;
+                }
+        
+        
+        
+                demoDiv.innerHTML = text; 
+                
+                */
+
+        // mit Funktion:
+
+        function textCount() {
+            var i = 0;
+
+            while (i < 10) {
+                text += 'Zähler steht auf ' + i + '.' + '<br>';
+                i++;
+            }
+
+            demoDiv.innerHTML = text;
+
+        }
+
+        btnOk.addEventListener('click', textCount);
+
+
+        /* FOR-Schleife */
+
+        function loopCount() {
+
+            for (var j = 0; j < 10; j++) {
+                text += 'Zähler steht auf ' + j + '.' + '<br>';
+            }
+
+            demoDiv.innerHTML = text;
+        }
+
+        btnFor.addEventListener('click', loopCount);
+
+
+    </script>
+</body>
+
+</html>
